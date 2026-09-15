@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Add user-local binaries to PATH if they are not already present.
+case ":${PATH:-}:" in
+  *:"$HOME/.local/bin":*) ;;
+  *) export PATH="$HOME/.local/bin:${PATH:-}" ;;
+esac

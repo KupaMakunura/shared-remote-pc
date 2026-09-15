@@ -1,0 +1,5 @@
+prefix_rule(pattern=["pnpm", "-s", "tsc", "--noEmit"], decision="allow")
+prefix_rule(pattern=["ss", "-ltnp", "sport", "=", ":18123"], decision="allow")
+prefix_rule(pattern=["python3", ".agents/skills/ui-ux-pro-max/scripts/search.py"], decision="allow")
+prefix_rule(pattern=["curl", "--silent", "--show-error"], decision="allow")
+prefix_rule(pattern=["gh", "pr", "view"], decision="allow")

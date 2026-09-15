@@ -1,0 +1,16 @@
+# Never commit secrets or generated machine state.
+.env
+.env.*
+!.env.example
+auth.json
+**/auth.json
+*.pem
+*.key
+*.token
+*.log
+*.sqlite
+*.sqlite-*
+.DS_Store
+*.swp
+*.swo
+

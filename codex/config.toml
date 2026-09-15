@@ -1,0 +1,26 @@
+# Portable Codex user preferences.
+# Machine-specific project trust, runtime paths, plugin marketplaces, and
+# authentication are intentionally not included here.
+
+model = "gpt-5.6-luna"
+model_reasoning_effort = "high"
+personality = "pragmatic"
+approvals_reviewer = "user"
+service_tier = "default"
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+
+[features]
+js_repl = false
+
+[notice]
+fast_default_opt_out = true
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = true
+followUpQueueMode = "queue"
+avatar-overlay-mascot-width-px = 118
+keepRemoteControlAwakeWhilePluggedIn = true

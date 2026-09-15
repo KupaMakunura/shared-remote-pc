@@ -1,0 +1,4 @@
+interface:
+  display_name: "TRPC Return Type"
+  short_description: "Standard tRPC return envelopes"
+  default_prompt: "Use $trpc-return-type to standardize tRPC procedure returns."
