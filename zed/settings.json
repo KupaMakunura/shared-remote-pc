@@ -1,0 +1,88 @@
+// Zed settings
+//
+// Authentication credentials are intentionally not stored here.
+{
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "cli_default_open_behavior": "existing_window",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "ui_font_weight": 500.0,
+  "code_lens": "off",
+  "prettier": {
+    "parser": "",
+    "allowed": true
+  },
+  "proxy": "",
+  "agent": {
+    "default_model": {
+      "effort": "high",
+      "provider": "copilot_chat",
+      "model": "gpt-5.4-mini",
+      "enable_thinking": true
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "bypassPermissions",
+        "model": "default"
+      },
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "type": "registry"
+    },
+    "cursor": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "buffer_font_weight": 500.0,
+  "ui_font_family": "JetBrains Mono",
+  "icon_theme": "Material Icon Theme",
+  "terminal": {
+    "font_size": 13.0,
+    "font_weight": 550.0,
+    "font_family": "JetBrains Mono NL"
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_family": "JetBrains Mono",
+  "ui_font_size": 15.0,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark Pro"
+  }
+}

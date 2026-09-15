@@ -6,6 +6,7 @@ install_packages=false
 install_zsh=true
 install_codex=true
 install_shell=true
+install_zed=true
 
 usage() {
   cat <<'EOF'
@@ -18,6 +19,7 @@ Options:
   --skip-zsh                 Do not install Oh My Zsh or ~/.zshrc.
   --skip-codex               Do not install Codex files.
   --skip-shell               Do not install ~/.profile, ~/.gitconfig, or ~/.local/bin/env.
+  --skip-zed                 Do not install Zed settings.
   -h, --help                Show this help.
 EOF
 }
@@ -28,6 +30,7 @@ for arg in "$@"; do
     --skip-zsh) install_zsh=false ;;
     --skip-codex) install_codex=false ;;
     --skip-shell) install_shell=false ;;
+    --skip-zed) install_zed=false ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $arg" >&2; usage >&2; exit 2 ;;
   esac
@@ -148,6 +151,16 @@ install_shell_files() {
   echo "Installed login profile, Git configuration, and local-bin environment helper."
 }
 
+install_zed_files() {
+  local zed_home="${ZED_HOME:-$HOME/.config/zed}"
+
+  mkdir -p "$zed_home"
+  backup_file "$zed_home/settings.json"
+  cp -p "$repo_dir/zed/settings.json" "$zed_home/settings.json"
+  echo "Installed Zed settings to $zed_home/settings.json."
+  echo "Zed credentials remain local to this machine."
+}
+
 if [[ "$install_zsh" == true ]]; then
   require_or_install_packages zsh git curl
   install_oh_my_zsh
@@ -155,6 +168,10 @@ fi
 
 if [[ "$install_shell" == true ]]; then
   install_shell_files
+fi
+
+if [[ "$install_zed" == true ]]; then
+  install_zed_files
 fi
 
 if [[ "$install_codex" == true ]]; then
